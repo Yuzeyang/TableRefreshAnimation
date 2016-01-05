@@ -5,9 +5,7 @@ TableView pull down or pull up refresh animation
 
 ## How to use
 ```obejct-c
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-
+<!--add header view,you can set if there is a navigation bar-->
     self.refreshHeaderView = [[TableHeaderRefreshView alloc] initWithScrollView:self.refreshTableView hasNavigationBar:YES];
 
     [self.refreshHeaderView doRefresh];
@@ -24,7 +22,9 @@ TableView pull down or pull up refresh animation
         [weakSelf.refreshHeaderView stopRefresh];
         });
     }];
+```
 
+```object-c
     self.refreshFooterView = [[TableFooterRefreshView alloc] initWithScrollView:self.refreshTableView hasNavigationBar:YES];
 
     [self.refreshFooterView addRefreshingBlock:^{
@@ -47,7 +47,6 @@ TableView pull down or pull up refresh animation
             [weakSelf.refreshFooterView stopRefresh];
         });
     }];
-}
 ```
 
 ## Gif
