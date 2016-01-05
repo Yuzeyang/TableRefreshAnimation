@@ -19,7 +19,7 @@ add header view,you can set if there is a navigation bar
         double delayTime = 3.0;
         dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, delayTime * NSEC_PER_SEC);
         dispatch_after(time, dispatch_get_main_queue(), ^{
-        [weakSelf.refreshHeaderView stopRefresh];
+            [weakSelf.refreshHeaderView stopRefresh];
         });
     }];
 ```
@@ -33,18 +33,9 @@ add footer view,you can set if there is a navigation bar
         // ...
 
         // here simulate do some refresh operation,and after 3s refresh complate
-        NSUInteger count = weakSelf.dataSource.count;
-        if (count <= kMaxDataSourceCount) {
-        for (NSUInteger i = count; i < count + 10; i++) {
-        NSString *data = [NSString stringWithFormat:@"This is title %lu",i];
-            [weakSelf.dataSource addObject:data];
-        }
-    }
-
-    double delayTime = 3.0;
-    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, delayTime * NSEC_PER_SEC);
-    dispatch_after(time, dispatch_get_main_queue(), ^{
-            [weakSelf.refreshTableView reloadData];
+        double delayTime = 3.0;
+        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, delayTime * NSEC_PER_SEC);
+        dispatch_after(time, dispatch_get_main_queue(), ^{
             [weakSelf.refreshFooterView stopRefresh];
         });
     }];
