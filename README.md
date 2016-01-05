@@ -4,8 +4,8 @@
 TableView pull down or pull up refresh animation
 
 ## How to use
+add header view,you can set if there is a navigation bar
 ```obejct-c
-<!--add header view,you can set if there is a navigation bar-->
     self.refreshHeaderView = [[TableHeaderRefreshView alloc] initWithScrollView:self.refreshTableView hasNavigationBar:YES];
 
     [self.refreshHeaderView doRefresh];
@@ -24,6 +24,7 @@ TableView pull down or pull up refresh animation
     }];
 ```
 
+add footer view,you can set if there is a navigation bar
 ```object-c
     self.refreshFooterView = [[TableFooterRefreshView alloc] initWithScrollView:self.refreshTableView hasNavigationBar:YES];
 
