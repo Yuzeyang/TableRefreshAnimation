@@ -44,3 +44,9 @@ add footer view,you can set if there is a navigation bar
 ## Gif
 ![](https://github.com/Yuzeyang/TableRefreshAnimation/raw/master/TableRefreshAnimation1.gif)
 ![](https://github.com/Yuzeyang/TableRefreshAnimation/raw/master/TableRefreshAnimation2.gif)
+
+## Related articles
+
+[iOS TableView上拉下拉刷新控件（一）](http://zeeyang.com/2016/01/05/iOS_TableView_refresh_controller_one/)
+
+[iOS TableView上拉下拉刷新控件（二）](http://zeeyang.com/2016/01/06/iOS_TableView_refresh_controller-two/)
